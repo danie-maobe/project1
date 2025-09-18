@@ -1,0 +1,171 @@
+<!-- save as: signin.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sign In </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* small custom tweaks */
+    .input-field { background: rgba(255,255,255,0.95); color: #0f172a; }
+    .input-field:focus { box-shadow: 0 0 0 4px rgba(37,99,235,0.12); }
+    .btn-primary { background: linear-gradient(90deg,#2563eb,#9333ea); }
+    .btn-primary:hover { transform: translateY(-3px); }
+  </style>
+</head>
+<body class="text-white bg-blue-900">
+
+  <!-- Sidebar (consistent) -->
+  <header class="fixed top-0 left-0 h-screen w-48 p-6 bg-gray-900 text-white shadow-lg flex flex-col items-center">
+    <img src="le1.jpg" alt="LEONNESTAR logo" class="h-20 w-auto mb-4 rounded-lg shadow-lg object-contain">
+    <h1 class="text-2xl font-bold text-center mb-6">Leonnestar</h1>
+    <nav class="w-full">
+      <ul class="space-y-4 text-lg text-center">
+         <li><a href="home.html">🏠 Home</a></li>
+        <li><a href="about.html">ℹ️ About</a></li>
+        <li><a href="subsidiaries.html">🏢 Subsidiaries</a></li>
+        <li><a href="services.html">⚙️ Services</a></li>
+        <li><a href="products.html" class="active">🛒 Products</a></li>
+        <li><a href="portfolio.html">🎨 Portfolio</a></li>
+        <li><a href="contact.html" class="hover:text-purple-400">Contact</a></li>
+        <li><a href="sign-in.html">🔑 Sign-in</a></li>
+        <li><a href="sign-up.html">📝 Sign-up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main class="ml-52 min-h-screen flex items-center justify-center p-10">
+    <div class="w-full max-w-md">
+      <div class="bg-blue-800 bg-opacity-70 p-8 rounded-2xl shadow-xl">
+        <h2 class="text-3xl font-bold text-center mb-2">Welcome back</h2>
+        <p class="text-center text-sm text-blue-100 mb-6">Sign in to access your dashboard</p>
+
+        <!-- live region for validation/messages -->
+        <div id="formMsg" aria-live="polite" class="mb-4 text-center"></div>
+
+        <form id="signinForm" novalidate>
+          
+          <!-- Email -->
+          <label class="sr-only" for="email">Email</label>
+          <input id="email" name="email" type="email" required
+                 placeholder="Email address"
+                 class="input-field px-4 py-3 rounded-lg mb-4 w-full border border-gray-300"
+                 aria-label="Email address">
+
+          <!-- Password with toggle -->
+          <div class="relative mb-4">
+            <label class="sr-only" for="password">Password</label>
+            <input id="password" name="password" type="password" required
+                   placeholder="Password"
+                   class="input-field px-4 py-3 rounded-lg w-full border border-gray-300"
+                   aria-label="Password">
+            <button type="button" id="togglePwd" aria-label="Show password"
+                    class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-600 hover:text-gray-900">
+              <i class="fa-regular fa-eye"></i>
+            </button>
+          </div>
+
+          <!-- Remember + forgot -->
+          <div class="flex items-center justify-between mb-6">
+            <label class="inline-flex items-center gap-2 text-sm text-blue-50">
+              <input type="checkbox" id="remember" class="rounded border-gray-300">
+              Remember me
+            </label>
+            <a href="forgot.html" class="text-sm text-blue-100 hover:underline">Forgot password?</a>
+          </div>
+
+          <!-- Submit -->
+          <button class="btn-primary w-full text-white font-semibold px-4 py-3 rounded-lg transition-transform" type="submit">
+            <i class="fas fa-lock mr-2"></i> Sign In
+          </button>
+
+          <!-- Divider -->
+          <div class="flex items-center my-5 text-sm text-blue-200">
+            <span class="flex-1 border-b border-blue-700"></span>
+            <span class="px-3">or sign in with</span>
+            <span class="flex-1 border-b border-blue-700"></span>
+          </div>
+
+          <!-- Social (placeholders) -->
+          <div class="grid grid-cols-2 gap-3">
+            <button type="button" class="bg-white text-slate-800 px-4 py-2 rounded-lg flex items-center justify-center gap-2">
+              <i class="fab fa-google"></i> Google
+            </button>
+            <button type="button" class="bg-white text-slate-800 px-4 py-2 rounded-lg flex items-center justify-center gap-2">
+              <i class="fab fa-facebook"></i> Facebook
+            </button>
+          </div>
+
+          <!-- Signup link -->
+          <p class="text-center text-sm text-blue-100 mt-6">
+            Don't have an account?
+            <a href="sign-up.html" class="font-semibold text-white underline ml-1">Sign up</a>
+          </p>
+        </form>
+      </div>
+
+      <!-- small footer text -->
+      <div class="text-center mt-6 text-xs text-blue-200">
+        © 2025 LEONNESTAR COMPANY LTD
+      </div>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script>
+    // Toggle password visibility
+    const toggleBtn = document.getElementById('togglePwd');
+    const pwdInput = document.getElementById('password');
+    toggleBtn.addEventListener('click', () => {
+      const icon = toggleBtn.querySelector('i');
+      if (pwdInput.type === 'password') {
+        pwdInput.type = 'text';
+        icon.className = 'fa-regular fa-eye-slash';
+        toggleBtn.setAttribute('aria-label','Hide password');
+      } else {
+        pwdInput.type = 'password';
+        icon.className = 'fa-regular fa-eye';
+        toggleBtn.setAttribute('aria-label','Show password');
+      }
+    });
+
+    // Basic client-side validation (demo)
+    const form = document.getElementById('signinForm');
+    const msg = document.getElementById('formMsg');
+
+    function validateEmail(email) {
+      // simple regex for demo purposes
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    function showMessage(text, type = 'error') {
+      msg.textContent = text;
+      msg.className = type === 'success' ? 'mb-4 text-green-300' : 'mb-4 text-red-300';
+    }
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = form.email.value.trim();
+      const password = form.password.value;
+
+      if (!email || !password) {
+        showMessage('Please fill in both email and password.');
+        return;
+      }
+      if (!validateEmail(email)) {
+        showMessage('Please enter a valid email address.');
+        return;
+      }
+
+      // Demo success (replace with real auth call)
+      showMessage('Signed in (demo). Connect to backend or Firebase to authenticate.', 'success');
+
+      // Optional: after successful sign-in you could redirect:
+      // window.location.href = 'home.html';
+    });
+  </script>
+</body>
+</html>

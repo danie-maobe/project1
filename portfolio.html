@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .portfolio-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .portfolio-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body class="bg-blue-900 text-white">
+
+  <!-- Sidebar Navigation -->
+  <header class="fixed top-0 left-0 h-screen w-52 p-6 bg-blue-800 shadow-lg">
+    <div class="flex flex-col items-center mb-6">
+      <!-- Company Logo -->
+      <img src="le1.jpg" alt="Company Logo" class="w-20 h-20 mb-3 rounded-full shadow-md">
+      <h1 class="text-xl font-bold text-center">Leonnestar</h1>
+    </div>
+    <nav>
+      <ul class="space-y-4 text-lg">
+        <li><a href="index.html">🏠 Home</a></li>
+        <li><a href="about.html">ℹ️ About</a></li>
+        <li><a href="subsidiaries.html">🏢 Subsidiaries</a></li>
+        <li><a href="services.html">⚙️ Services</a></li>
+        <li><a href="products.html">🛒 Products</a></li>
+        <li><a href="portfolio.html" class="active">🎨 Portfolio</a></li>
+        <li><a href="contact.html">📞 Contact</a></li>
+        <li><a href="signin.html">🔑 Sign In</a></li>
+        <li><a href="signup.html">📝 Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="ml-56 p-10">
+    <h2 class="text-4xl font-bold mb-8 text-center">Our Portfolio</h2>
+    <p class="text-center mb-10 max-w-2xl mx-auto">
+      A showcase of projects and milestones we’ve achieved across technology, logistics, training, and agriculture.
+    </p>
+
+    <!-- Portfolio Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Portfolio Item 1 -->
+      <div class="portfolio-card bg-slate-800 p-6 rounded-2xl text-center">
+        <img src="https://picsum.photos/400/250?random=11" alt="Portfolio 1" class="w-full h-40 object-cover rounded-lg mb-4">
+        <h3 class="text-2xl font-semibold mb-2">Cybersecurity Deployment</h3>
+        <p class="mb-3">Implemented enterprise-level security systems for major organizations.</p>
+      </div>
+
+      <!-- Portfolio Item 2 -->
+      <div class="portfolio-card bg-slate-800 p-6 rounded-2xl text-center">
+        <img src="https://picsum.photos/400/250?random=12" alt="Portfolio 2" class="w-full h-40 object-cover rounded-lg mb-4">
+        <h3 class="text-2xl font-semibold mb-2">Training Programs</h3>
+        <p class="mb-3">Trained over 500 professionals with hands-on technical courses.</p>
+      </div>
+
+      <!-- Portfolio Item 3 -->
+      <div class="portfolio-card bg-slate-800 p-6 rounded-2xl text-center">
+        <img src="https://picsum.photos/400/250?random=13" alt="Portfolio 3" class="w-full h-40 object-cover rounded-lg mb-4">
+        <h3 class="text-2xl font-semibold mb-2">Logistics Management</h3>
+        <p class="mb-3">Optimized transport routes to reduce costs and increase efficiency.</p>
+      </div>
+
+      <!-- Portfolio Item 4 -->
+      <div class="portfolio-card bg-slate-800 p-6 rounded-2xl text-center">
+        <img src="https://picsum.photos/400/250?random=14" alt="Portfolio 4" class="w-full h-40 object-cover rounded-lg mb-4">
+        <h3 class="text-2xl font-semibold mb-2">Agriculture Projects</h3>
+        <p class="mb-3">Launched sustainable farming initiatives for local communities.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="ml-56 text-center py-6">
+    <p>© 2025 LEONNESTAR COMPANY LTD. All Rights Reserved.</p>
+    <div class="mt-3 space-x-6 text-2xl">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+  </footer>
+
+</body>
+</html>

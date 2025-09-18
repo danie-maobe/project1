@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact us </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .form-box {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(6px);
+      color: #1e293b; /* dark text */
+    }
+    .input-field {
+      width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      outline: none;
+      margin-bottom: 15px;
+      background: white;
+      color: #1e293b;
+    }
+    .input-field:focus {
+      border-color: #2563eb;
+      box-shadow: 0 0 10px #38bdf8;
+    }
+    .btn-submit {
+      background: linear-gradient(90deg, #2563eb, #9333ea);
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .btn-submit:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body class="text-white">
+
+  <!-- Sidebar Navigation -->
+  <header class="fixed top-0 left-0 h-screen w-48 p-6 bg-gray-900 text-white shadow-lg flex flex-col items-center">
+    <!-- Logo -->
+    <img src="le1.jpg" alt="LEONNESTAR Logo" class="h-20 w-auto mb-4 rounded-lg shadow-lg">
+    <h1 class="text-2xl font-bold text-center mb-6">Leonnestar</h1>
+    <nav>
+      <ul class="space-y-4 text-lg text-center">
+        <li><a href="home.html" class="hover:text-yellow-400">🏠 Home</a></li>
+        <li><a href="about.html" class="hover:text-pink-400">ℹ️ About</a></li>
+        <li><a href="subsidiaries.html" class="hover:text-green-400">🏢 Subsidiaries</a></li>
+        <li><a href="services.html" class="hover:text-blue-400">⚙️ Services</a></li>
+        <li><a href="products.html" class="active">🛒 Products</a></li>
+        <li><a href="portfolio.html">🎨 Portfolio</a></li>
+        <li><a href="contact.html" class="hover:text-purple-400">📞 Contact</a></li>
+        <li><a href="sign-in.html">🔑 Sign-in</a></li>
+        <li><a href="sign-up.html">📝 Sign-up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="ml-52 min-h-screen flex items-center justify-center p-10 bg-blue-900">
+    
+    <div class="form-box p-10 rounded-2xl w-full max-w-2xl shadow-xl">
+      <h2 class="text-4xl font-bold text-center mb-6 text-blue-900">Contact Us</h2>
+      <p class="text-center mb-8 text-gray-700">We’d love to hear from you! Fill out the form below and we’ll get back to you.</p>
+
+      <!-- Contact Form -->
+      <form>
+        <input type="text" placeholder="Your Name" class="input-field">
+        <input type="email" placeholder="Your Email" class="input-field">
+        <textarea placeholder="Your Message" rows="5" class="input-field"></textarea>
+        <button type="submit" class="btn-submit w-full">📨 Send Message</button>
+      </form>
+
+      <!-- Contact Info -->
+      <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-gray-800">
+        <div>
+          <i class="fas fa-map-marker-alt text-3xl text-red-500 mb-2"></i>
+          <p>Nairobi, Kenya</p>
+        </div>
+        <div>
+          <i class="fas fa-phone text-3xl text-green-500 mb-2"></i>
+          <p>+254 712 364 908</p>
+        </div>
+        <div>
+          <i class="fas fa-envelope text-3xl text-yellow-500 mb-2"></i>
+          <p> leonnestarcompany@gmail.com</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="ml-52 text-center py-6 bg-gray-900">
+    <p>© 2025 LEONNESTAR COMPANY LTD. All Rights Reserved.</p>
+    <div class="mt-3 space-x-6 text-2xl">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+  </footer>
+
+</body>
+</html>

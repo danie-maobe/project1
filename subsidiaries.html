@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subsidiaries</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .card {
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.02);
+    }
+    .hidden-content {
+      display: none;
+      margin-top: 10px;
+      color: #f8fafc;
+    }
+    .logo-img {
+      height: 60px;
+      width: auto;
+      margin: 0 auto 10px;
+    }
+  </style>
+  <script>
+    function toggleContent(id) {
+      const element = document.getElementById(id);
+      element.style.display = element.style.display === "block" ? "none" : "block";
+    }
+  </script>
+</head>
+<body class="text-white">
+
+  <!-- Sidebar Navigation -->
+  <header class="fixed top-0 left-0 h-screen w-48 p-6 bg-gray-900 text-white shadow-lg flex flex-col items-center">
+    <!-- Main Logo -->
+    <img src="le1.jpg" alt="LEONNESTAR Logo" class="h-20 w-auto mb-4 rounded-lg shadow-lg">
+    <h1 class="text-2xl font-bold text-center mb-6">Leonnestar</h1>
+    <nav>
+      <ul class="space-y-4 text-lg text-center">
+        <li><a href="home.html" class="hover:text-yellow-400">🏠 Home</a></li>
+        <li><a href="about.html" class="hover:text-pink-400">ℹ️ About</a></li>
+        <li><a href="subsidiaries.html" class="hover:text-green-400">🏢 Subsidiaries</a></li>
+        <li><a href="services.html" class="hover:text-blue-400">⚙️ Services</a></li>
+        <li><a href="products.html" class="active">🛒 Products</a></li>
+        <li><a href="portfolio.html">🎨 Portfolio</a></li>
+        <li><a href="contact.html" class="hover:text-purple-400">📞 Contact</a></li>
+        <li><a href="sign-in.html">🔑 Sign-in</a></li>
+        <li><a href="sign-up.html">📝 Sign-up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="ml-52 min-h-screen bg-blue-900 p-10">
+    <div class="text-center p-10 rounded-2xl">
+      <h2 style="color:fuchsia" class="text-4xl font-bold mb-8"><u>Our Subsidiaries</u></h2>
+        <p><i>Discover the diverse businesses under Leonnestar Company Ltd</i></p>
+
+      <!-- Subsidiary 1 -->
+      <div onclick="toggleContent('sub1')" class="card bg-slate-800 p-6 rounded-2xl mb-4 shadow-lg">
+        <img src="le5.jpg" alt="Leonnestar Cybers Logo" class="logo-img">
+        <h3 style="color: blueviolet;" class="text-2xl font-semibold"><i>Leonnestar Cybers</i></h3>
+        <div id="sub1" class="hidden-content">
+          <p>Leonnestar Cybers is dedicated to providing <b>cutting-edge ICT and cybersecurity solutions</b> for individuals,
+            businesses, and institutions. We offer reliable internet services, digital literacy training, 
+            and secure systems to protect clients from cyber threats. Our mission is to empower communities with <b>safe, 
+            accessible, and affordable digital services</b> while building resilience in today’s connected world.</p>
+        </div>
+
+      </div>
+
+      <!-- Subsidiary 2 -->
+      <div onclick="toggleContent('sub2')" class="card bg-slate-800 p-6 rounded-2xl mb-4 shadow-lg">
+        <img src="le4.jpg" alt="Leonnestar Technical Training Logo" class="logo-img">
+                <h3 style="color: blueviolet;" class="text-2xl font-semibold"><i>Leonnestar Technical Training Institute</i></h3>
+        <div id="sub2" class="hidden-content">
+          <p>The Leonnestar Technical Training Institute equips learners with <b>practical skills for the modern job market.</b>
+             From ICT and engineering to entrepreneurship and soft skills, we blend classroom training with digital learning platforms to reach students everywhere. 
+             By partnering with industries, we ensure our graduates are <b>job-ready, innovative, and capable of driving change in their communities.</b></p>
+        </div>
+      </div>
+
+      <!-- Subsidiary 3 -->
+      <div onclick="toggleContent('sub3')" class="card bg-slate-800 p-6 rounded-2xl mb-4 shadow-lg">
+        <img src="le8.jpg" alt="Leonnestar Transport Logo" class="logo-img">
+                <h3 style="color: blueviolet;" class="text-2xl font-semibold"><i>Leonnestar Transport & Logistics Company</i></h3>
+        <div id="sub3" class="hidden-content">
+          <p>Our Transport & Logistics subsidiary is committed to providing <b>safe, reliable, and efficient transportation solutions.</b>
+             We specialize in cargo delivery, fleet management, and passenger services, supported by GPS tracking and modern route optimization systems. By combining innovation and professionalism,
+             we help businesses move goods faster while giving passengers a comfortable travel experience.</p>
+        </div>
+      </div>
+
+      <!-- Subsidiary 4 -->
+      <div onclick="toggleContent('sub4')" class="card bg-slate-800 p-6 rounded-2xl mb-4 shadow-lg">
+        <img src="le7.jpeg" alt="Leonnestar Farm Logo" class="logo-img">
+                <h3 style="color: blueviolet;" class="text-2xl font-semibold"><i>Leonnestar Farm Ltd</i></h3>
+        <div id="sub4" class="hidden-content">
+          <p>Leonnestar Farm Ltd champions <b>modern, sustainable agriculture.</b> 
+            We integrate technology into farming through smart irrigation, agri-tech drones, and eco-friendly practices.
+             Our goal is to enhance food security while connecting farmers directly to markets through digital platforms. 
+             We believe in farming that is not only productive but also improves livelihoods and protects the environment.</p>
+        </div>
+      </div>
+
+      <!-- Subsidiary 5 -->
+      <div onclick="toggleContent('sub5')" class="card bg-slate-800 p-6 rounded-2xl mb-4 shadow-lg">
+        <img src="le3.jpg" alt="Leonnestar Champions Logo" class="logo-img">
+                <h3 style="color: blueviolet;" class="text-2xl font-semibold"><i>Leonnestar Champions</i></h3>
+        <div id="sub5" class="hidden-content">
+          <p>Leonnestar Champions is committed to <b>nurturing talent, leadership, and personal growth.</b>
+             We empower young people and professionals through mentorship programs, competitions, and skill-building initiatives that inspire confidence and excellence.
+             Our goal is to shape champions who are not only successful in their fields but also role models in their communities.</p>
+        </div>
+      </div>
+
+      <!-- Subsidiary 6 -->
+      <div onclick="toggleContent('sub6')" class="card bg-slate-800 p-6 rounded-2xl mb-4 shadow-lg">
+        <img src="le9.jpg" alt="Leonnestar Queenstar Logo" class="logo-img">
+                <h3 style="color: blueviolet;" class="text-2xl font-semibold"><i>Leonnestar Queenstar Collections</i></h3>
+        <div id="sub6" class="hidden-content">
+          <p>Queenstar Collections specializes in <b>fashion, beauty, and lifestyle products</b> that reflect elegance and affordability. 
+            From stylish clothing to unique accessories, our collections are designed to meet the needs of both modern and traditional tastes.
+             With quality and creativity at the heart of our brand, Queenstar ensures every customer feels confident, stylish, and valued.</p>
+        </div>
+      </div>
+
+      <!-- Subsidiary 7 -->
+      <div onclick="toggleContent('sub7')" class="card bg-slate-800 p-6 rounded-2xl mb-4 shadow-lg">
+        <img src="le1.jpg" alt="Leonnestar Company Logo" class="logo-img">
+                <h3 style="color: blueviolet;" class="text-2xl font-semibold"><i>Leonnestar Company</i></h3>
+        <div id="sub7" class="hidden-content">
+          <p>As the parent organization, Leonnestar Company provides the <b>vision, strategy, and leadership</b> that guide all our subsidiaries.
+             We are committed to innovation, sustainability, and service excellence across diverse sectors, including ICT, training, logistics, agriculture, and social enterprises.
+            Leonnestar Company serves as the backbone of our operations, ensuring synergy and a unified purpose.</p>
+        </div>
+      </div>
+
+      <!-- Subsidiary 8 -->
+      <div onclick="toggleContent('sub8')" class="card bg-slate-800 p-6 rounded-2xl mb-4 shadow-lg">
+        <img src="le2.jpg" alt="Leonnestar Foundation Logo" class="logo-img">
+                <h3 style="color: blueviolet;" class="text-2xl font-semibold"><i>Leonnestar Foundation</i></h3>
+        <div id="sub8" class="hidden-content">
+          <p>The Leonnestar Foundation is the <b>social impact arm</b> of our company, dedicated to giving back to society.
+             We focus on <b>education, healthcare, youth empowerment, and community development projects.</b> 
+            By working with partners and local communities, the foundation supports initiatives that uplift lives, 
+            reduce inequality, and create sustainable opportunities for growth.</p>
+        </div>
+      </div>
+
+      <!-- Subsidiary 9 -->
+      <div onclick="toggleContent('sub9')" class="card bg-slate-800 p-6 rounded-2xl mb-4 shadow-lg">
+        <img src="le2.jpg" alt="Leonnestar Stores Logo" class="logo-img">
+                <h3 style="color: blueviolet;" class="text-2xl font-semibold"><i>Leonnestar Stores</i></h3>
+        <div id="sub9" class="hidden-content">
+          <p>Leonnestar Stores is a <b>retail subsidiary</b> that offers a wide range of products for everyday needs.
+             From groceries and farm produce to electronics, fashion, and household essentials, our stores are designed to provide <b>quality, affordability, and convenience.</b> 
+            Through both physical outlets and online shopping platforms, we ensure customers enjoy a seamless and reliable shopping experience.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Button -->
+    <a href="services.html" 
+      class="font-bold text-xl uppercase px-8 py-4 rounded-xl shadow-lg 
+             bg-gradient-to-r from-blue-600 to-purple-700 
+             hover:from-purple-700 hover:to-blue-600 
+             transition-transform transform hover:scale-110 
+             focus:ring-4 focus:ring-yellow-400">
+        📌 View Details
+    </a>
+ 
+  </main>
+
+  <!-- Footer -->
+  <footer class="ml-52 text-center py-6 bg-gray-900">
+    <p>© 2025 LEONNESTAR COMPANY LTD. All Rights Reserved.</p>
+    <div class="mt-3 space-x-6 text-2xl">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+  </footer>
+
+</body>
+</html>

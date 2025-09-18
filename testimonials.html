@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testimonials</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="bg-blue-900 text-white">
+
+  <!-- Sidebar Navigation -->
+  <header class="fixed top-0 left-0 h-screen w-48 p-6 bg-blue-800">
+    <img src="le1.jpg" alt="LEONNESTAR Logo" class="mx-auto mb-4 w-24 h-24 rounded-full">
+    <h1 class="text-xl font-bold text-center mb-6">Leonnestar</h1>
+    <nav>
+      <ul class="list-disc list-inside space-y-4 text-lg">
+        <li><a href="home.html">🏠 Home</a></li>
+        <li><a href="about.html">ℹ️ About</a></li>
+        <li><a href="subsidiaries.html">🏢 Subsidiaries</a></li>
+        <li><a href="services.html">⚙️ Services</a></li>
+        <li><a href="products.html">🛒 Products</a></li>
+        <li><a href="portfolio.html">🎨 Portfolio</a></li>
+        <li><a href="testimonials.html" class="font-bold text-yellow-400">⭐ Testimonials</a></li>
+        <li><a href="contact.html">📞 Contact</a></li>
+        <li><a href="sign-in.html">🔑 Sign In</a></li>
+        <li><a href="sign-up.html">📝 Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="ml-52 min-h-screen p-10">
+    <h2 class="text-4xl font-bold mb-6">⭐ Customer Testimonials</h2>
+
+    <!-- Testimonial Form -->
+    <div class="bg-slate-800 p-6 rounded-2xl mb-10">
+      <h3 class="text-2xl font-semibold mb-4">Share your experience</h3>
+      <form id="testimonial-form">
+        <input type="text" id="name" placeholder="Your Name" 
+          class="w-full p-3 mb-4 rounded-lg text-black" required>
+        <textarea id="message" placeholder="Your Testimonial" rows="4" 
+          class="w-full p-3 mb-4 rounded-lg text-black" required></textarea>
+        <button type="submit" 
+          class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 px-6 rounded-lg">
+          Submit
+        </button>
+      </form>
+    </div>
+
+    <!-- Testimonials List -->
+    <div id="testimonials-list" class="space-y-6">
+      <!-- Testimonials will appear here -->
+    </div>
+  </main>
+</body>
+</html>
